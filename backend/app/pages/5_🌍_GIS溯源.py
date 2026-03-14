@@ -130,9 +130,14 @@ with map_col:
     m = folium.Map(
         location=[32.0, 112.0],
         zoom_start=5,
-        tiles="CartoDB positron",
-        attr="CartoDB",
+        tiles=None,
     )
+    # 高德中文底图
+    folium.TileLayer(
+        tiles="https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+        attr="高德地图",
+        name="高德地图",
+    ).add_to(m)
 
     if map_mode == "热力图" and len(month_data) > 0:
         # 热力图模式

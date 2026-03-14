@@ -20,7 +20,6 @@ section.main > div { padding-top: 0.5rem; }
 
 /* ── 隐藏默认 Streamlit 元素 ── */
 #MainMenu {visibility: hidden;}
-header {visibility: hidden;}
 footer {visibility: hidden;}
 
 /* ── 全局背景 ── */
