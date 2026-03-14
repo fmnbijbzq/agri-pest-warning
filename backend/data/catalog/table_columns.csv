@@ -1,0 +1,16 @@
+db_name,table_name,column_name
+default,pest_history,year
+default,pest_history,month
+default,pest_history,province
+default,pest_history,crop
+default,pest_history,pest_name
+default,pest_history,temperature
+default,pest_history,humidity
+default,pest_history,rainfall
+default,pest_history,risk_score
+default,pest_history,severity
+default,pest_knowledge,pest_name
+default,pest_knowledge,crop
+default,pest_knowledge,peak_month
+default,pest_knowledge,condition
+default,pest_knowledge,prevention

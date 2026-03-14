@@ -1,0 +1,9 @@
+default:
+  pest_history:
+    description: ''
+    selection_rule: ''
+    sql_rule: ''
+  pest_knowledge:
+    description: ''
+    selection_rule: ''
+    sql_rule: ''
