@@ -8,6 +8,11 @@ GLOBAL_CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
 
+/* ── 强制亮色模式，防止跟随系统暗色主题 ── */
+:root {
+    color-scheme: light only;
+}
+
 /* ── 全局基础 ── */
 html, body, [class*="css"] {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -24,6 +29,15 @@ footer {visibility: hidden;}
 
 /* ── 全局背景 ── */
 .stApp {
+    background: #F4F7F6;
+}
+
+/* ── 强制主内容区亮色 ── */
+.main, section.main, [data-testid="stAppViewContainer"] {
+    background: #F4F7F6;
+    color: #1B3B36;
+}
+header[data-testid="stHeader"] {
     background: #F4F7F6;
 }
 
@@ -155,6 +169,12 @@ section[data-testid="stSidebar"] .stButton > button:hover {
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    box-sizing: border-box;
 }
 .stat-card::before {
     content: '';
@@ -190,6 +210,7 @@ section[data-testid="stSidebar"] .stButton > button:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.3;
+    white-space: nowrap;
 }
 .stat-card .stat-label {
     font-size: 0.82rem;
@@ -253,6 +274,11 @@ section[data-testid="stSidebar"] .stButton > button:hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     min-height: 240px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
@@ -366,6 +392,8 @@ section[data-testid="stSidebar"] .stButton > button:hover {
 .stTextInput > div > div > input {
     border-radius: 12px !important;
     border-color: #d1d5db !important;
+    background-color: #ffffff !important;
+    color: #374151 !important;
     transition: all 0.3s ease;
 }
 .stSelectbox > div > div:focus-within,
@@ -373,6 +401,24 @@ section[data-testid="stSidebar"] .stButton > button:hover {
 .stTextInput > div > div > input:focus {
     border-color: #34d399 !important;
     box-shadow: 0 0 0 2px rgba(52,211,153,0.2) !important;
+}
+/* 下拉列表弹出面板强制亮色 */
+[data-baseweb="popover"], [data-baseweb="menu"], [data-baseweb="select"] ul {
+    background-color: #ffffff !important;
+    color: #374151 !important;
+}
+[data-baseweb="menu"] li {
+    color: #374151 !important;
+}
+[data-baseweb="menu"] li:hover {
+    background-color: #f0fdf4 !important;
+}
+/* Streamlit label文字 */
+.main .stSelectbox label,
+.main .stMultiSelect label,
+.main .stTextInput label,
+.main .stSlider label {
+    color: #374151 !important;
 }
 
 /* ── 标签页 ── */
@@ -479,6 +525,18 @@ section[data-testid="stSidebar"] [data-testid="stSidebarNav"] span {
     animation: fadeInUp 0.5s ease-out;
 }
 
+/* ── 卡片行 Grid 布局（根本解决等高问题） ── */
+.stat-card-row {
+    display: grid;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+.feature-card-row {
+    display: grid;
+    gap: 1.2rem;
+    margin: 0.5rem 0;
+}
+
 /* ── Slider 样式 ── */
 .stSlider > div > div > div > div {
     background-color: #059669 !important;
@@ -529,6 +587,32 @@ def stat_card(icon: str, value: str, label: str, sub: str = ""):
     )
 
 
+def stat_card_row(cards: list):
+    """一行多个指标卡片 — 使用 CSS Grid 保证等高。
+    cards: list of (icon, value, label) 或 (icon, value, label, sub)
+    """
+    n = len(cards)
+    htmls = []
+    for c in cards:
+        icon, value, label = c[0], c[1], c[2]
+        sub = c[3] if len(c) > 3 else ""
+        sub_html = f'<div class="stat-sub">{sub}</div>' if sub else ""
+        htmls.append(
+            f'<div class="stat-card">'
+            f'<div class="stat-icon">{icon}</div>'
+            f'<div class="stat-value">{value}</div>'
+            f'<div class="stat-label">{label}</div>'
+            f'{sub_html}'
+            f'</div>'
+        )
+    st.markdown(
+        f'<div class="stat-card-row" style="grid-template-columns:repeat({n},1fr);">'
+        + "".join(htmls)
+        + "</div>",
+        unsafe_allow_html=True,
+    )
+
+
 def feature_card(icon: str, title: str, desc: str, tag: str, color_class: str):
     """首页功能模块卡片"""
     st.markdown(
@@ -538,6 +622,29 @@ def feature_card(icon: str, title: str, desc: str, tag: str, color_class: str):
         f'<div class="fc-desc">{desc}</div>'
         f'<span class="fc-tag">{tag}</span>'
         f'</div>',
+        unsafe_allow_html=True,
+    )
+
+
+def feature_card_row(cards: list):
+    """一行多个功能卡片 — 使用 CSS Grid 保证等高。
+    cards: list of (icon, title, desc, tag, color_class)
+    """
+    n = len(cards)
+    htmls = []
+    for icon, title, desc, tag, color_class in cards:
+        htmls.append(
+            f'<div class="feature-card {color_class}">'
+            f'<div class="fc-icon">{icon}</div>'
+            f'<div class="fc-title">{title}</div>'
+            f'<div class="fc-desc">{desc}</div>'
+            f'<span class="fc-tag">{tag}</span>'
+            f'</div>'
+        )
+    st.markdown(
+        f'<div class="feature-card-row" style="grid-template-columns:repeat({n},1fr);">'
+        + "".join(htmls)
+        + "</div>",
         unsafe_allow_html=True,
     )
 

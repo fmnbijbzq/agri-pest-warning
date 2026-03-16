@@ -6,9 +6,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Agricultural pest/disease warning system (智慧农业病虫害预警系统) — a Python web app combining XGBoost ML predictions, DeepSeek LLM analysis, and multi-agent orchestration to provide crop pest risk assessment for Chinese provinces.
 
+## Environment
+
+本项目使用 conda 环境 `agri-pest` 运行。所有命令均需在该环境下执行：
+
+```bash
+conda activate agri-pest
+```
+
 ## Common Commands
 
 ```bash
+# 激活环境
+conda activate agri-pest
+
 # Setup (first time)
 bash scripts/setup.sh          # installs deps, clones DATAGEN, inits DB
 

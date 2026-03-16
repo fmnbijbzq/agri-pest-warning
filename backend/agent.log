@@ -2,3 +2,466 @@
 2026-03-14 17:38:29,296 - src.logger - INFO - Document management tools initialized
 2026-03-15 02:09:19,330 - src.logger - INFO - Module initialized successfully
 2026-03-15 02:09:19,345 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:17:04,107 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:17:04,121 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:24:33,886 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:24:33,899 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:47:56,374 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:47:56,387 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:47:56,707 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 16:51:18,240 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:51:18,584 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:51:18,729 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 16:52:08,307 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:52:08,668 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:52:08,792 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 16:53:41,000 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:53:41,018 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:53:41,289 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 16:54:35,636 - src.logger - INFO - Module initialized successfully
+2026-03-15 16:54:35,648 - src.logger - INFO - Document management tools initialized
+2026-03-15 16:54:35,843 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 17:02:45,732 - src.logger - INFO - Module initialized successfully
+2026-03-15 17:02:46,399 - src.logger - INFO - Document management tools initialized
+2026-03-15 17:02:46,631 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 17:03:12,191 - src.logger - INFO - Module initialized successfully
+2026-03-15 17:03:12,824 - src.logger - INFO - Document management tools initialized
+2026-03-15 17:03:13,034 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 17:03:16,505 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-15 17:03:16,506 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:03:16,543 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-15 17:03:16,543 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:03:16,543 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,543 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:03:16,549 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-15 17:03:16,549 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-15 17:03:16,549 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:03:16,549 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:03:16,550 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,550 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:03:16,552 - src.logger - INFO - process_agent created successfully
+2026-03-15 17:03:16,553 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-15 17:03:16,553 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:03:16,553 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-15 17:03:16,553 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:03:16,553 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,553 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:03:16,557 - src.logger - INFO - visualization_agent created successfully
+2026-03-15 17:03:16,557 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-15 17:03:16,557 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:03:16,557 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-15 17:03:16,557 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:03:16,557 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,557 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:03:16,561 - src.logger - INFO - code_agent created successfully
+2026-03-15 17:03:16,562 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-15 17:03:16,562 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:03:16,562 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-15 17:03:16,562 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:03:16,562 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,562 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:03:16,568 - src.logger - INFO - search_agent created successfully
+2026-03-15 17:03:16,568 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-15 17:03:16,568 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:03:16,569 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-15 17:03:16,569 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:03:16,569 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,569 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:03:16,573 - src.logger - INFO - report_agent created successfully
+2026-03-15 17:03:16,573 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-15 17:03:16,573 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:03:16,573 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-15 17:03:16,573 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:03:16,573 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,574 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:03:16,577 - src.logger - INFO - quality_review_agent created successfully
+2026-03-15 17:03:16,577 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-15 17:03:16,578 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:03:16,578 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-15 17:03:16,578 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:03:16,578 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,578 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:03:16,583 - src.logger - INFO - note_agent created successfully
+2026-03-15 17:03:16,583 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-15 17:03:16,583 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:03:16,583 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-15 17:03:16,583 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:03:16,583 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:03:16,583 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:03:16,586 - src.logger - INFO - refiner_agent created successfully
+2026-03-15 17:04:39,441 - src.logger - INFO - Module initialized successfully
+2026-03-15 17:04:39,454 - src.logger - INFO - Document management tools initialized
+2026-03-15 17:04:39,666 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 17:04:42,925 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-15 17:04:42,926 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:04:42,940 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-15 17:04:42,941 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:04:42,941 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,941 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 17:04:42,946 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-15 17:04:42,947 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-15 17:04:42,947 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:04:42,947 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:04:42,947 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,947 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 17:04:42,950 - src.logger - INFO - process_agent created successfully
+2026-03-15 17:04:42,950 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-15 17:04:42,950 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:04:42,950 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-15 17:04:42,950 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:04:42,950 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,950 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 17:04:42,954 - src.logger - INFO - visualization_agent created successfully
+2026-03-15 17:04:42,954 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-15 17:04:42,954 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:04:42,954 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-15 17:04:42,954 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:04:42,954 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,954 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 17:04:42,958 - src.logger - INFO - code_agent created successfully
+2026-03-15 17:04:42,958 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-15 17:04:42,958 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:04:42,958 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-15 17:04:42,958 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:04:42,958 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,958 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 17:04:42,962 - src.logger - INFO - search_agent created successfully
+2026-03-15 17:04:42,962 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-15 17:04:42,962 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:04:42,962 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-15 17:04:42,962 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:04:42,962 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,962 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 17:04:42,966 - src.logger - INFO - report_agent created successfully
+2026-03-15 17:04:42,966 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-15 17:04:42,966 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:04:42,966 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-15 17:04:42,966 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:04:42,966 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,966 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 17:04:42,970 - src.logger - INFO - quality_review_agent created successfully
+2026-03-15 17:04:42,970 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-15 17:04:42,970 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:04:42,970 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-15 17:04:42,970 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:04:42,970 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,970 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 17:04:42,975 - src.logger - INFO - note_agent created successfully
+2026-03-15 17:04:42,976 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-15 17:04:42,976 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:04:42,976 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-15 17:04:42,976 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:04:42,976 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 17:04:42,976 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 17:04:42,979 - src.logger - INFO - refiner_agent created successfully
+2026-03-15 21:41:29,240 - src.logger - INFO - Module initialized successfully
+2026-03-15 21:41:29,255 - src.logger - INFO - Document management tools initialized
+2026-03-15 21:41:29,512 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 21:41:31,757 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-15 21:41:31,757 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:41:31,797 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-15 21:41:31,797 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:41:31,797 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,797 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:41:31,806 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-15 21:41:31,807 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-15 21:41:31,807 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:41:31,807 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:41:31,807 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,807 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:41:31,810 - src.logger - INFO - process_agent created successfully
+2026-03-15 21:41:31,810 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-15 21:41:31,810 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:41:31,810 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-15 21:41:31,811 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:41:31,811 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,811 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:41:31,816 - src.logger - INFO - visualization_agent created successfully
+2026-03-15 21:41:31,817 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-15 21:41:31,817 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:41:31,817 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-15 21:41:31,817 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:41:31,817 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,817 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:41:31,821 - src.logger - INFO - code_agent created successfully
+2026-03-15 21:41:31,822 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-15 21:41:31,822 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:41:31,822 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-15 21:41:31,822 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:41:31,822 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,822 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:41:31,826 - src.logger - INFO - search_agent created successfully
+2026-03-15 21:41:31,826 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-15 21:41:31,826 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:41:31,826 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-15 21:41:31,827 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:41:31,827 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,827 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:41:31,830 - src.logger - INFO - report_agent created successfully
+2026-03-15 21:41:31,831 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-15 21:41:31,831 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:41:31,831 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-15 21:41:31,831 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:41:31,831 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,831 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:41:31,836 - src.logger - INFO - quality_review_agent created successfully
+2026-03-15 21:41:31,836 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-15 21:41:31,836 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:41:31,836 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-15 21:41:31,836 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:41:31,836 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,836 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:41:31,843 - src.logger - INFO - note_agent created successfully
+2026-03-15 21:41:31,844 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-15 21:41:31,844 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:41:31,844 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-15 21:41:31,844 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:41:31,844 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:41:31,844 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:41:31,847 - src.logger - INFO - refiner_agent created successfully
+2026-03-15 21:58:38,287 - src.logger - INFO - Module initialized successfully
+2026-03-15 21:58:38,301 - src.logger - INFO - Document management tools initialized
+2026-03-15 21:58:38,636 - src.logger - INFO - Web scraping tools initialized
+2026-03-15 21:58:40,887 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-15 21:58:40,888 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:58:40,931 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-15 21:58:40,931 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:58:40,931 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,931 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-15 21:58:40,941 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-15 21:58:40,941 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-15 21:58:40,941 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:58:40,942 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:58:40,942 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,942 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-15 21:58:40,944 - src.logger - INFO - process_agent created successfully
+2026-03-15 21:58:40,944 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-15 21:58:40,945 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:58:40,945 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-15 21:58:40,945 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:58:40,945 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,945 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-15 21:58:40,948 - src.logger - INFO - visualization_agent created successfully
+2026-03-15 21:58:40,949 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-15 21:58:40,949 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:58:40,949 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-15 21:58:40,949 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:58:40,949 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,949 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-15 21:58:40,952 - src.logger - INFO - code_agent created successfully
+2026-03-15 21:58:40,953 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-15 21:58:40,953 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:58:40,953 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-15 21:58:40,953 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:58:40,953 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,953 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-15 21:58:40,957 - src.logger - INFO - search_agent created successfully
+2026-03-15 21:58:40,957 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-15 21:58:40,957 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:58:40,957 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-15 21:58:40,957 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:58:40,957 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,957 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-15 21:58:40,961 - src.logger - INFO - report_agent created successfully
+2026-03-15 21:58:40,961 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-15 21:58:40,961 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:58:40,961 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-15 21:58:40,961 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:58:40,961 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,961 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-15 21:58:40,965 - src.logger - INFO - quality_review_agent created successfully
+2026-03-15 21:58:40,965 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-15 21:58:40,965 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:58:40,965 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-15 21:58:40,965 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:58:40,965 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,965 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-15 21:58:40,970 - src.logger - INFO - note_agent created successfully
+2026-03-15 21:58:40,971 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-15 21:58:40,971 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:58:40,971 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-15 21:58:40,971 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:58:40,971 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-15 21:58:40,971 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-15 21:58:40,975 - src.logger - INFO - refiner_agent created successfully
+2026-03-16 11:09:21,351 - src.logger - INFO - Module initialized successfully
+2026-03-16 11:09:21,365 - src.logger - INFO - Document management tools initialized
+2026-03-16 11:09:21,695 - src.logger - INFO - Web scraping tools initialized
+2026-03-16 11:09:24,219 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-16 11:09:24,219 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:09:24,275 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-16 11:09:24,275 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:09:24,275 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,275 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:09:24,285 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-16 11:09:24,286 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-16 11:09:24,286 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:09:24,286 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:09:24,286 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,286 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:09:24,289 - src.logger - INFO - process_agent created successfully
+2026-03-16 11:09:24,289 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-16 11:09:24,289 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:09:24,289 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-16 11:09:24,289 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:09:24,289 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,289 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:09:24,293 - src.logger - INFO - visualization_agent created successfully
+2026-03-16 11:09:24,293 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-16 11:09:24,293 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:09:24,293 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-16 11:09:24,293 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:09:24,293 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,293 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:09:24,297 - src.logger - INFO - code_agent created successfully
+2026-03-16 11:09:24,297 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-16 11:09:24,297 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:09:24,297 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-16 11:09:24,297 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:09:24,297 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,297 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:09:24,301 - src.logger - INFO - search_agent created successfully
+2026-03-16 11:09:24,302 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-16 11:09:24,302 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:09:24,302 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-16 11:09:24,302 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:09:24,302 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,302 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:09:24,305 - src.logger - INFO - report_agent created successfully
+2026-03-16 11:09:24,305 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-16 11:09:24,305 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:09:24,305 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-16 11:09:24,306 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:09:24,306 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,306 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:09:24,310 - src.logger - INFO - quality_review_agent created successfully
+2026-03-16 11:09:24,310 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-16 11:09:24,310 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:09:24,310 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-16 11:09:24,310 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:09:24,310 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,310 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:09:24,316 - src.logger - INFO - note_agent created successfully
+2026-03-16 11:09:24,316 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-16 11:09:24,316 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:09:24,316 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-16 11:09:24,317 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:09:24,317 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:09:24,317 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:09:24,320 - src.logger - INFO - refiner_agent created successfully
+2026-03-16 11:09:29,168 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:09:33,202 - src.logger - INFO - Listing contents of directory: ./data
+2026-03-16 11:09:45,049 - src.logger - INFO - Performing Google search for query: 水稻病虫害风险分析 机器学习 预测模型 研究
+2026-03-16 11:09:45,150 - src.logger - ERROR - Error during Google search: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2026-03-16 11:15:42,985 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:17:27,271 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:17:27,277 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:17:31,885 - src.logger - DEBUG - Tool limits config not found, using defaults
+2026-03-16 11:17:31,885 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:19:41,469 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:19:41,476 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:19:45,628 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:19:49,778 - src.logger - INFO - Listing contents of directory: data
+2026-03-16 11:19:53,691 - src.logger - INFO - Listing contents of directory: data/datagen_workspace
+2026-03-16 11:20:00,569 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:20:06,130 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:20:36,522 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:20:39,597 - src.logger - INFO - Listing contents of directory: docs
+2026-03-16 11:22:59,950 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:22:59,957 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:23:04,050 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:23:07,799 - src.logger - INFO - Listing contents of directory: data
+2026-03-16 11:23:11,658 - src.logger - INFO - Listing contents of directory: data/datagen_workspace
+2026-03-16 11:23:16,014 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:23:19,757 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:25:30,889 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:25:30,897 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:29:03,466 - src.logger - INFO - Module initialized successfully
+2026-03-16 11:29:03,480 - src.logger - INFO - Document management tools initialized
+2026-03-16 11:29:03,863 - src.logger - INFO - Web scraping tools initialized
+2026-03-16 11:29:06,362 - src.logger - DEBUG - No external config for hypothesis_agent, using hardcoded prompt
+2026-03-16 11:29:06,362 - src.logger - WARNING - Failed to load tools from config for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:29:06,409 - src.logger - DEBUG - Using hardcoded tools for hypothesis_agent
+2026-03-16 11:29:06,409 - src.logger - WARNING - Failed to check skills for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:29:06,409 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,409 - src.logger - WARNING - Failed to load MCP tools for hypothesis_agent: Agent config not found: config/agents/hypothesis_agent/AGENT.md
+2026-03-16 11:29:06,420 - src.logger - INFO - hypothesis_agent created successfully
+2026-03-16 11:29:06,421 - src.logger - DEBUG - No external config for process_agent, using hardcoded prompt
+2026-03-16 11:29:06,421 - src.logger - WARNING - Failed to load tools from config for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:29:06,421 - src.logger - WARNING - Failed to check skills for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:29:06,421 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,421 - src.logger - WARNING - Failed to load MCP tools for process_agent: Agent config not found: config/agents/process_agent/AGENT.md
+2026-03-16 11:29:06,424 - src.logger - INFO - process_agent created successfully
+2026-03-16 11:29:06,424 - src.logger - DEBUG - No external config for visualization_agent, using hardcoded prompt
+2026-03-16 11:29:06,425 - src.logger - WARNING - Failed to load tools from config for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:29:06,425 - src.logger - DEBUG - Using hardcoded tools for visualization_agent
+2026-03-16 11:29:06,425 - src.logger - WARNING - Failed to check skills for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:29:06,425 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,425 - src.logger - WARNING - Failed to load MCP tools for visualization_agent: Agent config not found: config/agents/visualization_agent/AGENT.md
+2026-03-16 11:29:06,430 - src.logger - INFO - visualization_agent created successfully
+2026-03-16 11:29:06,431 - src.logger - DEBUG - No external config for code_agent, using hardcoded prompt
+2026-03-16 11:29:06,431 - src.logger - WARNING - Failed to load tools from config for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:29:06,431 - src.logger - DEBUG - Using hardcoded tools for code_agent
+2026-03-16 11:29:06,431 - src.logger - WARNING - Failed to check skills for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:29:06,431 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,431 - src.logger - WARNING - Failed to load MCP tools for code_agent: Agent config not found: config/agents/code_agent/AGENT.md
+2026-03-16 11:29:06,436 - src.logger - INFO - code_agent created successfully
+2026-03-16 11:29:06,437 - src.logger - DEBUG - No external config for search_agent, using hardcoded prompt
+2026-03-16 11:29:06,437 - src.logger - WARNING - Failed to load tools from config for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:29:06,437 - src.logger - DEBUG - Using hardcoded tools for search_agent
+2026-03-16 11:29:06,437 - src.logger - WARNING - Failed to check skills for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:29:06,437 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,437 - src.logger - WARNING - Failed to load MCP tools for search_agent: Agent config not found: config/agents/search_agent/AGENT.md
+2026-03-16 11:29:06,442 - src.logger - INFO - search_agent created successfully
+2026-03-16 11:29:06,443 - src.logger - DEBUG - No external config for report_agent, using hardcoded prompt
+2026-03-16 11:29:06,443 - src.logger - WARNING - Failed to load tools from config for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:29:06,443 - src.logger - DEBUG - Using hardcoded tools for report_agent
+2026-03-16 11:29:06,443 - src.logger - WARNING - Failed to check skills for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:29:06,443 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,443 - src.logger - WARNING - Failed to load MCP tools for report_agent: Agent config not found: config/agents/report_agent/AGENT.md
+2026-03-16 11:29:06,448 - src.logger - INFO - report_agent created successfully
+2026-03-16 11:29:06,449 - src.logger - DEBUG - No external config for quality_review_agent, using hardcoded prompt
+2026-03-16 11:29:06,449 - src.logger - WARNING - Failed to load tools from config for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:29:06,449 - src.logger - DEBUG - Using hardcoded tools for quality_review_agent
+2026-03-16 11:29:06,449 - src.logger - WARNING - Failed to check skills for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:29:06,449 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,449 - src.logger - WARNING - Failed to load MCP tools for quality_review_agent: Agent config not found: config/agents/quality_review_agent/AGENT.md
+2026-03-16 11:29:06,454 - src.logger - INFO - quality_review_agent created successfully
+2026-03-16 11:29:06,455 - src.logger - DEBUG - No external config for note_agent, using hardcoded prompt
+2026-03-16 11:29:06,455 - src.logger - WARNING - Failed to load tools from config for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:29:06,455 - src.logger - DEBUG - Using hardcoded tools for note_agent
+2026-03-16 11:29:06,455 - src.logger - WARNING - Failed to check skills for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:29:06,455 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,455 - src.logger - WARNING - Failed to load MCP tools for note_agent: Agent config not found: config/agents/note_agent/AGENT.md
+2026-03-16 11:29:06,462 - src.logger - INFO - note_agent created successfully
+2026-03-16 11:29:06,463 - src.logger - DEBUG - No external config for refiner_agent, using hardcoded prompt
+2026-03-16 11:29:06,463 - src.logger - WARNING - Failed to load tools from config for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:29:06,463 - src.logger - DEBUG - Using hardcoded tools for refiner_agent
+2026-03-16 11:29:06,463 - src.logger - WARNING - Failed to check skills for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:29:06,463 - src.logger - WARNING - MCP config not found: config/mcp.yaml
+2026-03-16 11:29:06,463 - src.logger - WARNING - Failed to load MCP tools for refiner_agent: Agent config not found: config/agents/refiner_agent/AGENT.md
+2026-03-16 11:29:06,469 - src.logger - INFO - refiner_agent created successfully
+2026-03-16 11:29:11,892 - src.logger - INFO - Listing contents of directory: ./
+2026-03-16 11:29:15,462 - src.logger - INFO - Listing contents of directory: ./data
+2026-03-16 11:29:19,299 - src.logger - INFO - Attempting to read CSV file: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/processed/agri_pest_data.csv
+2026-03-16 11:29:19,304 - src.logger - WARNING - Error with encoding utf-8: [Errno 2] No such file or directory: '/root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/processed/agri_pest_data.csv'
+2026-03-16 11:29:19,318 - src.logger - WARNING - Error with encoding latin1: [Errno 2] No such file or directory: '/root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/processed/agri_pest_data.csv'
+2026-03-16 11:29:19,318 - src.logger - WARNING - Error with encoding iso-8859-1: [Errno 2] No such file or directory: '/root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/processed/agri_pest_data.csv'
+2026-03-16 11:29:19,320 - src.logger - WARNING - Error with encoding cp1252: [Errno 2] No such file or directory: '/root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/processed/agri_pest_data.csv'
+2026-03-16 11:29:19,320 - src.logger - ERROR - Unable to read file with provided encodings
+2026-03-16 11:30:57,406 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:31:02,428 - src.logger - INFO - Listing contents of directory: docs
+2026-03-16 11:33:02,630 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:33:02,636 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md
+2026-03-16 11:33:08,432 - src.logger - DEBUG - Tool limits config not found, using defaults
+2026-03-16 11:33:08,433 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/基于大数据的水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:34:57,544 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:34:57,547 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md
+2026-03-16 11:35:02,276 - src.logger - INFO - Listing contents of directory: .
+2026-03-16 11:35:06,682 - src.logger - INFO - Listing contents of directory: data
+2026-03-16 11:35:10,725 - src.logger - INFO - Listing contents of directory: data/datagen_workspace
+2026-03-16 11:35:17,864 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/data/datagen_workspace/水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:35:23,642 - src.logger - WARNING - Read validation failed for /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md: Access denied: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/水稻病虫害风险分析研究报告.md is in blocked path '/root'
+2026-03-16 11:36:48,672 - src.logger - INFO - Creating document: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/research_report.md
+2026-03-16 11:36:48,678 - src.logger - INFO - Document created successfully: /root/workspace/agri-pest-warning/backend/data/datagen_workspace/research_report.md

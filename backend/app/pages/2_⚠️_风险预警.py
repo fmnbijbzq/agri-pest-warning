@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card, risk_banner
+from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row, risk_banner
 from config.settings import CROP_TYPES, PROVINCES
 
 inject_css()
@@ -74,15 +74,12 @@ if st.button("🔍 开始预测", type="primary", use_container_width=True):
 
     st.progress(min(score, 1.0))
 
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        stat_card("📊", f"{score:.1%}", "风险评分", "")
-    with c2:
-        stat_card("🏷️", level, "风险等级", "")
-    with c3:
-        stat_card("🌡️", f"{temperature}°C", "当前气温", f"湿度 {humidity}%")
-    with c4:
-        stat_card("🌧️", f"{rainfall}mm", "近期降雨", "")
+    stat_card_row([
+        ("📊", f"{score:.1%}", "风险评分"),
+        ("🏷️", level, "风险等级"),
+        ("🌡️", f"{temperature}°C", "当前气温", f"湿度 {humidity}%"),
+        ("🌧️", f"{rainfall}mm", "近期降雨"),
+    ])
 
     st.markdown("")
 

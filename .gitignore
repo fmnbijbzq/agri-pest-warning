@@ -12,8 +12,12 @@ build/
 .DS_Store
 backend/external/
 backend/config/.generated/
+backend/data/datagen_workspace/
 backend/config/agent_models.yaml
 backend/.env
 backend/config/.generated/
 .claude/
 .vscode/
+*.log
+*.png
+backend/agent.log

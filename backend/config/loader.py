@@ -27,6 +27,17 @@ def _resolve_env_vars(value):
     return value
 
 
+def _resolve_db_path(cfg: dict) -> dict:
+    """将 SQLite 相对路径转为基于项目根目录的绝对路径"""
+    url = cfg.get("database", {}).get("url", "")
+    if url.startswith("sqlite:///") and not url.startswith("sqlite:////"):
+        # sqlite:///data/xxx.db → 提取相对路径部分
+        rel_path = url[len("sqlite:///"):]
+        abs_path = str((_PROJECT_ROOT / rel_path).resolve())
+        cfg["database"]["url"] = f"sqlite:///{abs_path}"
+    return cfg
+
+
 def load_config() -> dict:
     """加载并缓存统一配置（全局单例）"""
     global _config
@@ -35,6 +46,7 @@ def load_config() -> dict:
     with open(_CONFIG_PATH, "r", encoding="utf-8") as f:
         raw = yaml.safe_load(f)
     _config = _resolve_env_vars(raw)
+    _config = _resolve_db_path(_config)
     return _config
 
 

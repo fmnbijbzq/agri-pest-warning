@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide",
 )
 
-from app.ui_style import inject_css, page_header, feature_card, stat_card, section
+from app.ui_style import inject_css, page_header, feature_card, feature_card_row, stat_card, stat_card_row, section
 
 inject_css()
 
@@ -37,15 +37,12 @@ if db_path.exists():
 
         section("核心数据指标", "📈")
 
-        c1, c2, c3, c4 = st.columns(4)
-        with c1:
-            stat_card("📋", f"{int(row['cnt']):,}", "数据总量", "条历史记录")
-        with c2:
-            stat_card("🗺️", str(int(row['prov'])), "覆盖省份", "个监测区域")
-        with c3:
-            stat_card("🌱", str(int(row['crop'])), "作物种类", "种主要作物")
-        with c4:
-            stat_card("⚡", f"{row['avg_risk']:.1%}", "平均风险", "全局风险均值")
+        stat_card_row([
+            ("📋", f"{int(row['cnt']):,}", "数据总量", "条历史记录"),
+            ("🗺️", str(int(row['prov'])), "覆盖省份", "个监测区域"),
+            ("🌱", str(int(row['crop'])), "作物种类", "种主要作物"),
+            ("⚡", f"{row['avg_risk']:.1%}", "平均风险", "全局风险均值"),
+        ])
     except Exception:
         pass
 
@@ -54,16 +51,13 @@ st.markdown("")
 # ── 功能模块 ──
 section("功能模块", "🚀")
 
-cols = st.columns(4)
 modules = [
     ("📊", "数据总览", "历史病虫害数据多维度可视化，支持省份、作物交叉筛选分析", "Plotly + Pandas", "fc-green"),
     ("🗺️", "风险预警", "基于 XGBoost 模型与实时气象条件，预测区域病虫害风险等级", "XGBoost + 气象API", "fc-amber"),
     ("🤖", "AI 助手", "自然语言交互式查询，自动生成 SQL 并解读数据分析结果", "LLM + NL2SQL", "fc-blue"),
     ("📝", "分析报告", "一键生成专业级研究报告，涵盖数据分析与防治建议", "多Agent协作", "fc-purple"),
 ]
-for col, (icon, title, desc, tag, color) in zip(cols, modules):
-    with col:
-        feature_card(icon, title, desc, tag, color)
+feature_card_row(modules)
 
 st.markdown("")
 

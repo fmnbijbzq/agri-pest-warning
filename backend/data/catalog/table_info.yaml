@@ -1,9 +1,9 @@
 default:
   pest_history:
-    description: ''
-    selection_rule: ''
+    description: '农作物病虫害历史记录表，包含各省份、作物的病虫害发生情况、气象数据和风险评分。字段包括：year(年份)、month(月份)、province(省份)、crop(作物)、pest_name(病虫害名称)、temperature(温度)、humidity(湿度)、rainfall(降雨量)、risk_score(风险评分0-1)、severity(严重程度)'
+    selection_rule: '当用户询问病虫害历史数据、风险评分、气象条件与病虫害关系、省份或作物的病虫害统计时，选择此表'
     sql_rule: ''
   pest_knowledge:
-    description: ''
-    selection_rule: ''
+    description: '病虫害防治知识表，包含常见病虫害的防治方法和发生条件。字段包括：pest_name(病虫害名称)、crop(作物)、peak_month(高发月份)、condition(发生条件)、prevention(防治措施)'
+    selection_rule: '当用户询问病虫害防治方法、发生条件、高发时间等知识性问题时，选择此表'
     sql_rule: ''

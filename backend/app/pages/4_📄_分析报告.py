@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card
+from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row
 from config.settings import CROP_TYPES, PROVINCES
 
 inject_css()
@@ -75,18 +75,14 @@ if st.button("📝 生成研究报告", type="primary", use_container_width=True
         # 数据摘要
         section("数据摘要", "📈")
 
-        m1, m2, m3, m4, m5 = st.columns(5)
-        with m1:
-            stat_card("📋", f"{analysis_data['total_records']:,}", "数据量", "条")
-        with m2:
-            stat_card("⚡", f"{analysis_data['avg_risk']:.1%}", "平均风险", "")
-        with m3:
-            ws = analysis_data["weather_summary"]
-            stat_card("🌡️", f"{ws['avg_temp']}°C", "平均气温", "")
-        with m4:
-            stat_card("💧", f"{ws['avg_humidity']}%", "平均湿度", "")
-        with m5:
-            stat_card("🌧️", f"{ws['avg_rainfall']}mm", "平均降雨", "")
+        ws = analysis_data["weather_summary"]
+        stat_card_row([
+            ("📋", f"{analysis_data['total_records']:,}", "数据量", "条"),
+            ("⚡", f"{analysis_data['avg_risk']:.1%}", "平均风险"),
+            ("🌡️", f"{ws['avg_temp']}°C", "平均气温"),
+            ("💧", f"{ws['avg_humidity']}%", "平均湿度"),
+            ("🌧️", f"{ws['avg_rainfall']}mm", "平均降雨"),
+        ])
 
         st.markdown("")
 

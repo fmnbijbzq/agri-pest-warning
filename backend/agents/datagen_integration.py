@@ -37,7 +37,7 @@ def _add_datagen_to_path():
 def create_datagen_workflow():
     """
     创建DATAGEN工作流实例
-    
+
     返回编译好的LangGraph workflow，可以直接调用
     """
     if not DATAGEN_PATH.exists():
@@ -45,20 +45,27 @@ def create_datagen_workflow():
             f"DATAGEN未克隆到 {DATAGEN_PATH}\n"
             f"请运行: git clone https://github.com/starpig1129/DATAGEN.git {DATAGEN_PATH}"
         )
-    
+
     _setup_datagen_env()
     _add_datagen_to_path()
-    
-    # 从统一配置生成DATAGEN所需的agents YAML
-    custom_config = generate_datagen_yaml()
-    os.environ["AGENT_MODELS_CONFIG"] = custom_config
-    
-    from src.core.language_models import LanguageModelManager
-    from src.core.workflow import WorkflowManager
-    
-    lm_manager = LanguageModelManager(config_path=custom_config)
+
+    # 从统一配置生成DATAGEN所需的agents YAML（写入 backend/config/agent_models.yaml）
+    generate_datagen_yaml()
+
+    # DATAGEN的 src/config.py 在 import 时用相对路径 'config/agent_models.yaml' 加载
+    # 临时切换到 backend/ 目录确保相对路径能正确解析，导入完成后恢复
+    original_cwd = os.getcwd()
+    try:
+        os.chdir(PROJECT_ROOT)
+
+        from src.core.language_models import LanguageModelManager
+        from src.core.workflow import WorkflowManager
+    finally:
+        os.chdir(original_cwd)
+
+    lm_manager = LanguageModelManager()
     working_dir = os.environ["WORKING_DIRECTORY"]
-    
+
     workflow_manager = WorkflowManager(lm_manager, working_dir)
     return workflow_manager.get_graph()
 
@@ -66,28 +73,28 @@ def create_datagen_workflow():
 def run_datagen_analysis(research_topic: str) -> str:
     """
     使用DATAGEN完整pipeline运行分析
-    
+
     Args:
         research_topic: 研究主题描述
-        
+
     Returns:
         生成的研究报告（Markdown格式）
     """
     try:
         graph = create_datagen_workflow()
-        
+
         # DATAGEN的输入格式
         initial_state = {
             "messages": [{"role": "user", "content": research_topic}],
-            "team_members": ["Hypothesis", "Process", "Visualization", 
+            "team_members": ["Hypothesis", "Process", "Visualization",
                            "Search", "Coder", "Report", "QualityReview"],
         }
-        
+
         config = {"configurable": {"thread_id": "agri-pest-analysis"}}
-        
+
         # 运行workflow
         result = graph.invoke(initial_state, config)
-        
+
         # 提取报告内容
         if "messages" in result:
             messages = result["messages"]
@@ -96,9 +103,9 @@ def run_datagen_analysis(research_topic: str) -> str:
                 content = msg.get("content", "") if isinstance(msg, dict) else str(msg)
                 if len(content) > 200:  # 报告通常较长
                     return content
-        
+
         return str(result)
-        
+
     except Exception as e:
         print(f"⚠️ DATAGEN运行失败: {e}")
         print("   回退到自研报告生成方案")
@@ -108,7 +115,7 @@ def run_datagen_analysis(research_topic: str) -> str:
 def generate_research_report(analysis_data: dict) -> str:
     """
     生成研究报告 — 优先DATAGEN，回退自研
-    
+
     Args:
         analysis_data: 分析结果数据字典
     """
@@ -130,7 +137,7 @@ def generate_research_report(analysis_data: dict) -> str:
         f"2. 语言专业严谨，适合学术场景\n"
         f"3. 结论要有具体数据支撑\n"
     )
-    
+
     # 尝试使用DATAGEN
     if DATAGEN_PATH.exists():
         try:
@@ -139,7 +146,7 @@ def generate_research_report(analysis_data: dict) -> str:
                 return report
         except Exception as e:
             print(f"DATAGEN失败: {e}")
-    
+
     # 回退到自研方案
     from utils.llm import generate_report
     return generate_report(analysis_data)

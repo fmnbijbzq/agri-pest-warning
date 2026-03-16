@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card
+from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row
 from utils.database import execute_query
 
 inject_css()
@@ -56,18 +56,14 @@ filtered = df[(df["crop"].isin(crop_filter)) & (df["province"].isin(province_fil
 # ── 概览 ──
 section("数据概览", "📈")
 
-c1, c2, c3, c4, c5 = st.columns(5)
-with c1:
-    stat_card("📋", f"{len(filtered):,}", "筛选记录", f"共 {len(df):,} 条")
-with c2:
-    stat_card("🗺️", str(filtered["province"].nunique()), "覆盖省份", "")
-with c3:
-    stat_card("🌱", str(filtered["crop"].nunique()), "作物种类", "")
-with c4:
-    avg_r = filtered["risk_score"].mean() if len(filtered) > 0 else 0
-    stat_card("⚡", f"{avg_r:.1%}", "平均风险", "")
-with c5:
-    stat_card("🐛", str(filtered["pest_name"].nunique()) if len(filtered) > 0 else "0", "病虫害种类", "")
+avg_r = filtered["risk_score"].mean() if len(filtered) > 0 else 0
+stat_card_row([
+    ("📋", f"{len(filtered):,}", "筛选记录", f"共 {len(df):,} 条"),
+    ("🗺️", str(filtered["province"].nunique()), "覆盖省份"),
+    ("🌱", str(filtered["crop"].nunique()), "作物种类"),
+    ("⚡", f"{avg_r:.1%}", "平均风险"),
+    ("🐛", str(filtered["pest_name"].nunique()) if len(filtered) > 0 else "0", "病虫害种类"),
+])
 
 # ── 省份分析 ──
 section("省份分析", "🗺️")

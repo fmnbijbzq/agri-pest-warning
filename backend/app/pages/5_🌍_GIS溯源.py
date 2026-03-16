@@ -9,7 +9,7 @@ from pathlib import Path
 from streamlit_folium import st_folium
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card
+from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row
 from utils.database import execute_query
 
 st.set_page_config(page_title="GIS 时空溯源", page_icon="🌍", layout="wide")
@@ -93,18 +93,14 @@ cumulative = filtered[filtered["month"] <= month_sel]
 
 # ── 当月统计 ──
 st.markdown("")
-c1, c2, c3, c4, c5 = st.columns(5)
-with c1:
-    stat_card("📋", f"{len(month_data):,}", "当月记录", f"{month_sel}月")
-with c2:
-    stat_card("📊", f"{len(cumulative):,}", "累计记录", f"1-{month_sel}月")
-with c3:
-    avg_risk = month_data["risk_score"].mean() if len(month_data) > 0 else 0
-    stat_card("⚡", f"{avg_risk:.1%}", "平均风险", "当月")
-with c4:
-    stat_card("🗺️", str(month_data["province"].nunique()), "涉及省份", "")
-with c5:
-    stat_card("🐛", str(month_data["pest_name"].nunique()), "病虫害种类", "")
+avg_risk = month_data["risk_score"].mean() if len(month_data) > 0 else 0
+stat_card_row([
+    ("📋", f"{len(month_data):,}", "当月记录", f"{month_sel}月"),
+    ("📊", f"{len(cumulative):,}", "累计记录", f"1-{month_sel}月"),
+    ("⚡", f"{avg_risk:.1%}", "平均风险", "当月"),
+    ("🗺️", str(month_data["province"].nunique()), "涉及省份"),
+    ("🐛", str(month_data["pest_name"].nunique()), "病虫害种类"),
+])
 
 st.markdown("")
 
