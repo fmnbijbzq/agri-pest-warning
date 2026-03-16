@@ -1,45 +1,46 @@
-"""📝 分析报告页面 (现代化版本)"""
+"""分析报告页面 (v3.0 专业级 UI)"""
 import streamlit as st
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row
+from app.ui_style import inject_css, page_header, section, stat_card_row, svg_icon
 from config.settings import CROP_TYPES, PROVINCES
 
 inject_css()
 page_header(
-    "📝 研究报告生成",
+    "研究报告生成",
     "基于数据分析结果，AI 自动生成符合学术规范的病虫害研究报告",
-    badge="✨ 多Agent协作 · 一键生成 · 专业报告",
+    badge="多Agent协作 · 一键生成 · 专业报告",
+    icon="file-text",
 )
 
 # ── 参数设置 ──
-section("报告参数", "⚙️")
+section("报告参数", "settings")
 
 col1, col2 = st.columns(2)
 with col1:
-    report_province = st.multiselect("🌍 分析省份", PROVINCES, default=["湖南", "湖北"])
-    report_crop = st.selectbox("🌱 分析作物", CROP_TYPES)
+    report_province = st.multiselect("分析省份", PROVINCES, default=["湖南", "湖北"])
+    report_crop = st.selectbox("分析作物", CROP_TYPES)
 with col2:
-    report_title = st.text_input("📌 报告标题", f"基于大数据的{report_crop}病虫害风险分析研究")
-    year_range = st.slider("📅 数据年份范围", 2018, 2025, (2020, 2025))
+    report_title = st.text_input("报告标题", f"基于大数据的{report_crop}病虫害风险分析研究")
+    year_range = st.slider("数据年份范围", 2018, 2025, (2020, 2025))
 
 # 参数预览卡片
 st.markdown(
     f'<div class="white-card" style="margin:1rem 0 1.5rem;">'
     f'<div style="display:flex;justify-content:space-around;align-items:center;text-align:center;'
-    f'font-size:0.88rem;color:#4b5563;">'
-    f'<span>🌍 <b>{", ".join(report_province)}</b></span>'
+    f'font-size:0.85rem;color:#4b5563;">'
+    f'<span>{svg_icon("map-pin", 15, "#059669")} <b>{", ".join(report_province)}</b></span>'
     f'<span style="color:#e5e7eb;">|</span>'
-    f'<span>🌱 <b>{report_crop}</b></span>'
+    f'<span>{svg_icon("leaf", 15, "#059669")} <b>{report_crop}</b></span>'
     f'<span style="color:#e5e7eb;">|</span>'
-    f'<span>📅 <b>{year_range[0]}-{year_range[1]}</b></span>'
+    f'<span>{svg_icon("calendar", 15, "#059669")} <b>{year_range[0]}-{year_range[1]}</b></span>'
     f'</div></div>',
     unsafe_allow_html=True,
 )
 
-if st.button("📝 生成研究报告", type="primary", use_container_width=True):
+if st.button("生成研究报告", type="primary", use_container_width=True):
     progress_bar = st.progress(0, text="正在查询数据库...")
 
     try:
@@ -73,15 +74,15 @@ if st.button("📝 生成研究报告", type="primary", use_container_width=True
         }
 
         # 数据摘要
-        section("数据摘要", "📈")
+        section("数据摘要", "trending-up")
 
         ws = analysis_data["weather_summary"]
         stat_card_row([
-            ("📋", f"{analysis_data['total_records']:,}", "数据量", "条"),
-            ("⚡", f"{analysis_data['avg_risk']:.1%}", "平均风险"),
-            ("🌡️", f"{ws['avg_temp']}°C", "平均气温"),
-            ("💧", f"{ws['avg_humidity']}%", "平均湿度"),
-            ("🌧️", f"{ws['avg_rainfall']}mm", "平均降雨"),
+            ("clipboard", f"{analysis_data['total_records']:,}", "数据量", "条"),
+            ("zap", f"{analysis_data['avg_risk']:.1%}", "平均风险"),
+            ("thermometer", f"{ws['avg_temp']}°C", "平均气温"),
+            ("droplets", f"{ws['avg_humidity']}%", "平均湿度"),
+            ("cloud-rain", f"{ws['avg_rainfall']}mm", "平均降雨"),
         ])
 
         st.markdown("")
@@ -90,9 +91,9 @@ if st.button("📝 生成研究报告", type="primary", use_container_width=True
 
         report_content = generate_research_report(analysis_data)
 
-        progress_bar.progress(100, text="✅ 报告生成完成！")
+        progress_bar.progress(100, text="报告生成完成")
 
-        section("报告正文", "📄")
+        section("报告正文", "file-text")
 
         st.markdown(
             f'<div class="report-box">{report_content}</div>',
@@ -102,12 +103,12 @@ if st.button("📝 生成研究报告", type="primary", use_container_width=True
         st.markdown("")
 
         # 下载按钮
-        section("导出报告", "📥")
+        section("导出报告", "download")
 
         dl1, dl2, dl3 = st.columns([2, 2, 1])
         with dl1:
             st.download_button(
-                "📥 下载 Markdown",
+                "下载 Markdown",
                 data=report_content,
                 file_name=f"{report_title}.md",
                 mime="text/markdown",
@@ -115,7 +116,7 @@ if st.button("📝 生成研究报告", type="primary", use_container_width=True
             )
         with dl2:
             st.download_button(
-                "📥 下载纯文本",
+                "下载纯文本",
                 data=report_content,
                 file_name=f"{report_title}.txt",
                 mime="text/plain",

@@ -1,29 +1,29 @@
-"""📊 数据总览页面 (现代化版本)"""
+"""数据总览页面 (v3.0 专业级 UI)"""
 import streamlit as st
 import plotly.express as px
-import plotly.graph_objects as go
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from app.ui_style import inject_css, page_header, section, stat_card, stat_card_row
+from app.ui_style import inject_css, page_header, section, stat_card_row
 from utils.database import execute_query
 
 inject_css()
 page_header(
-    "📊 数据总览",
+    "数据总览",
     "历史病虫害数据多维度可视化分析，支持作物和省份交叉筛选",
     badge="Plotly 可视化 · 实时筛选",
+    icon="bar-chart",
 )
 
-# Plotly 全局模板 — 更现代的视觉风格
+# Plotly 全局模板
 CHART_TEMPLATE = dict(
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Noto Sans SC, sans-serif", size=12, color="#4b5563"),
+    font=dict(family="Inter, Noto Sans SC, sans-serif", size=12, color="#4b5563"),
     margin=dict(t=30, b=40, l=50, r=20),
     hoverlabel=dict(bgcolor="#ffffff", font_size=13, bordercolor="#d1fae5",
-                    font=dict(family="Noto Sans SC, sans-serif")),
+                    font=dict(family="Inter, Noto Sans SC, sans-serif")),
 )
 
 
@@ -39,36 +39,36 @@ except Exception:
     st.stop()
 
 # ── 筛选器 ──
-section("数据筛选", "🔍")
+section("数据筛选", "filter")
 
 col1, col2 = st.columns(2)
 with col1:
     crop_filter = st.multiselect(
-        "🌱 选择作物", list(df["crop"].unique()), default=list(df["crop"].unique())
+        "选择作物", list(df["crop"].unique()), default=list(df["crop"].unique())
     )
 with col2:
     province_filter = st.multiselect(
-        "🌍 选择省份", list(df["province"].unique()), default=list(df["province"].unique()[:5])
+        "选择省份", list(df["province"].unique()), default=list(df["province"].unique()[:5])
     )
 
 filtered = df[(df["crop"].isin(crop_filter)) & (df["province"].isin(province_filter))]
 
 # ── 概览 ──
-section("数据概览", "📈")
+section("数据概览", "trending-up")
 
 avg_r = filtered["risk_score"].mean() if len(filtered) > 0 else 0
 stat_card_row([
-    ("📋", f"{len(filtered):,}", "筛选记录", f"共 {len(df):,} 条"),
-    ("🗺️", str(filtered["province"].nunique()), "覆盖省份"),
-    ("🌱", str(filtered["crop"].nunique()), "作物种类"),
-    ("⚡", f"{avg_r:.1%}", "平均风险"),
-    ("🐛", str(filtered["pest_name"].nunique()) if len(filtered) > 0 else "0", "病虫害种类"),
+    ("clipboard", f"{len(filtered):,}", "筛选记录", f"共 {len(df):,} 条"),
+    ("map-pin", str(filtered["province"].nunique()), "覆盖省份"),
+    ("leaf", str(filtered["crop"].nunique()), "作物种类"),
+    ("zap", f"{avg_r:.1%}", "平均风险"),
+    ("bug", str(filtered["pest_name"].nunique()) if len(filtered) > 0 else "0", "病虫害种类"),
 ])
 
 # ── 省份分析 ──
-section("省份分析", "🗺️")
+section("省份分析", "map")
 
-tab1, tab2 = st.tabs(["📊 记录分布", "🎯 风险对比"])
+tab1, tab2 = st.tabs(["记录分布", "风险对比"])
 
 with tab1:
     prov_data = filtered.groupby("province").size().reset_index(name="count").sort_values("count", ascending=False)
@@ -90,7 +90,7 @@ with tab2:
         st.plotly_chart(fig1b, use_container_width=True)
 
 # ── 时间 & 严重程度 ──
-section("时间与严重程度", "📅")
+section("时间与严重程度", "calendar")
 
 chart_a, chart_b = st.columns(2)
 
@@ -116,7 +116,7 @@ with chart_b:
     st.plotly_chart(fig4, use_container_width=True)
 
 # ── 气象关联 ──
-section("气象 — 风险关联分析", "🌡️")
+section("气象 — 风险关联分析", "thermometer")
 
 sample = filtered.sample(min(800, len(filtered))) if len(filtered) > 0 else filtered
 fig3 = px.scatter(
