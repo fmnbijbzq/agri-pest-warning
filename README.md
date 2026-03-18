@@ -60,6 +60,7 @@ backend/
 │   ├── database.py           # SQLAlchemy 数据库操作
 │   └── weather_api.py        # 气象数据API（Open-Meteo + Mock）
 ├── external/
+│   ├──  openchatbi           # 智能聊天型 BI 工具(git clone)
 │   └── DATAGEN/              # 多Agent研究报告框架（git clone）
 ├── tests/                    # 测试目录
 └── docs/                     # 文档
@@ -135,4 +136,4 @@ streamlit run app/🏠_首页.py
 ## 参考项目
 
 - [DATAGEN](https://github.com/starpig1129/DATAGEN) — 多Agent研究助手架构
-- [OpenChatBI](https://github.com/zhongyu09/openchatbi) — 对话式BI平台
+- [OpenChatBI](https://github.com/fmnbijbzq/openchatbi) — 对话式BI平台
