@@ -78,7 +78,6 @@ conda activate agri-pest
 ### 2. 安装依赖
 
 ```bash
-cd backend
 pip install -r requirements.txt
 ```
 
